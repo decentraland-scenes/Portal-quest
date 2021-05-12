@@ -1,0 +1,218 @@
+{
+	"id": "b7c9023f-4b6e-4d07-9d74-a6914697fe9c",
+	"name": "Old lady returns",
+	"description": "DCL Origin Stories",
+	"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Jack-o%27-Lantern_2003-10-31.jpg",
+	"requirements": [
+	],
+	"active": true,
+	"visibility": "visible",
+	"tasks": [
+	  {
+		"id": "7bd3d240-13fa-4559-b4fe-f870a9afd5d6",
+		"description": "Talk to the old lady",
+		"coordinates": null,
+		"required": true,
+		"section": "Day 1",
+		"progressMode": {
+		  "type": "single"
+		},
+		"requirements": [
+		],
+		"validations": [
+		],
+		"steps": [
+		  {
+			"id": "c0f10305-c7ec-4aa9-b382-2c4386f50863",
+			"validations": [
+			]
+		  }
+		]
+	  },
+	  {
+		"id": "bf851b43-f174-4b31-af73-b7b098c00263",
+		"description": "Talk to the Chaman",
+		"coordinates": null,
+		"required": true,
+		"section": "Day 1",
+		"progressMode": {
+		  "type": "single"
+		},
+		"requirements": [
+		  {
+			"type": "completedPrevious"
+		  }
+		],
+		"previousTask": {
+		  "id": "7bd3d240-13fa-4559-b4fe-f870a9afd5d6"},
+		"validations": [
+		],
+		"steps": [
+		  {
+			"id": "0fc1d585-ede4-4492-a44c-a6039421cea9",
+			"validations": [
+			]
+		  }
+		]
+	  },
+	  {
+		"id": "eae19e16-cda8-4aca-8366-91d09ac707b3",
+		"description": "Drink secret potion",
+		"coordinates": null,
+		"required": true,
+		"section": "Day 1",
+		"progressMode": {
+		  "type": "single"
+		},
+		"requirements": [
+		  {
+			"type": "completedPrevious"
+		  }
+		],
+			  "previousTask": {
+		  "id": "7bd3d240-13fa-4559-b4fe-f870a9afd5d6"},
+		"validations": [
+		],
+		"steps": [
+		  {
+			"id": "fffb9bd9-5e71-4b81-8846-f64455756485",
+			"validations": [
+			]
+		  }
+		]
+	  },
+	  {
+		"id": "a2085915-f276-4d08-a87d-956e19055444",
+		"description": "Ring the bells of hell",
+		"coordinates": null,
+		"required": true,
+		"section": "Day 1",
+		"progressMode": {
+		  "type": "single"
+		},
+		"requirements": [
+		  {
+			"type": "completedPrevious"
+		  }
+		],
+			  "previousTask": {
+		  "id": "7bd3d240-13fa-4559-b4fe-f870a9afd5d6"},
+		"validations": [
+		],
+		"steps": [
+		  {
+			"id": "f8266b5d-8729-41c9-8755-f647624269fd",
+			"validations": [
+			]
+		  }
+		]
+	  },
+	  {
+		"id": "168debbc-d113-4dfd-817b-00afaf2f28ff",
+		"description": "Find 10 crystals",
+		"coordinates": null,
+		"required": true,
+		"section": "Day 1",
+		"progressMode": {
+		  "type": "count",
+		  "direction": "up",
+		  "repetitions": 10,
+		  "unit": "gems"
+		},
+		"requirements": [
+		  {
+			"type": "completedPrevious"
+		  }
+		],
+		  "previousTask": {
+		  "id": "bf851b43-f174-4b31-af73-b7b098c00263"},
+		"validations": [
+		],
+		"steps": [
+		  {
+			"id": "033bfa00-fb32-4d76-8774-9436ec3f208c",
+			"validations": [
+			]
+		  }
+		]
+	  },
+	  {
+		"id": "20623a96-281a-4ac0-8aea-c5536d20b036",
+		"description": "Bring the gems back to the chaman",
+		"coordinates": null,
+		"required": true,
+		"section": "Day 1",
+		"progressMode": {
+		  "type": "single"
+		},
+		"requirements": [
+		  {
+			"type": "completedPrevious"
+		  }
+		],
+		  "previousTask": {
+		  "id": "168debbc-d113-4dfd-817b-00afaf2f28ff"},
+		"validations": [
+		],
+		"steps": [
+		  {
+			"id": "b95c73b4-c442-4803-a523-3e31ed0fbe09",
+			"validations": [
+			]
+		  }
+		]
+	  },
+	  {
+		"id": "b3f05f45-5344-4616-909e-afacbec74910",
+		"description": "Enter temple",
+		"coordinates": null,
+		"required": true,
+		"section": "Day 1",
+		"progressMode": {
+		  "type": "single"
+		},
+		"requirements": [
+		  {
+			"type": "completedPrevious"
+		  }
+		],
+		  "previousTask": {
+		  "id": "20623a96-281a-4ac0-8aea-c5536d20b036"},
+		"validations": [
+		],
+		"steps": [
+		  {
+			"id": "297bd242-6132-412a-bd12-4492af6d622a",
+			"validations": [
+			]
+		  }
+		]
+	  },
+	  {
+		"id": "03ae327d-da04-4bb5-8302-d922500447a4",
+		"description": "Return to the old lady",
+		"coordinates": null,
+		"required": true,
+		"section": "Day 1",
+		"progressMode": {
+		  "type": "single"
+		},
+		  "previousTask": {
+		  "id": "b3f05f45-5344-4616-909e-afacbec74910"},
+		"requirements": [
+		  {
+			"type": "completedPrevious"
+		  }
+		],
+		"validations": [
+		],
+		"steps": [
+		  {
+			"id": "8ce76c40-14c7-4250-bd89-827fbe265c8c",
+			"validations": [
+			]
+		  }
+		]
+	  }
+	]
+  }
