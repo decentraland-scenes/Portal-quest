@@ -1,218 +1,147 @@
 {
-	"id": "b7c9023f-4b6e-4d07-9d74-a6914697fe9c",
-	"name": "Old lady returns",
-	"description": "DCL Origin Stories",
-	"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Jack-o%27-Lantern_2003-10-31.jpg",
-	"requirements": [
-	],
-	"active": true,
-	"visibility": "visible",
-	"tasks": [
-	  {
-		"id": "7bd3d240-13fa-4559-b4fe-f870a9afd5d6",
-		"description": "Talk to the old lady",
-		"coordinates": null,
-		"required": true,
-		"section": "Day 1",
-		"progressMode": {
-		  "type": "single"
-		},
-		"requirements": [
-		],
-		"validations": [
-		],
-		"steps": [
-		  {
-			"id": "c0f10305-c7ec-4aa9-b382-2c4386f50863",
-			"validations": [
-			]
-		  }
-		]
-	  },
-	  {
-		"id": "bf851b43-f174-4b31-af73-b7b098c00263",
-		"description": "Talk to the Chaman",
-		"coordinates": null,
-		"required": true,
-		"section": "Day 1",
-		"progressMode": {
-		  "type": "single"
-		},
-		"requirements": [
-		  {
-			"type": "completedPrevious"
-		  }
-		],
-		"previousTask": {
-		  "id": "7bd3d240-13fa-4559-b4fe-f870a9afd5d6"},
-		"validations": [
-		],
-		"steps": [
-		  {
-			"id": "0fc1d585-ede4-4492-a44c-a6039421cea9",
-			"validations": [
-			]
-		  }
-		]
-	  },
-	  {
-		"id": "eae19e16-cda8-4aca-8366-91d09ac707b3",
-		"description": "Drink secret potion",
-		"coordinates": null,
-		"required": true,
-		"section": "Day 1",
-		"progressMode": {
-		  "type": "single"
-		},
-		"requirements": [
-		  {
-			"type": "completedPrevious"
-		  }
-		],
-			  "previousTask": {
-		  "id": "7bd3d240-13fa-4559-b4fe-f870a9afd5d6"},
-		"validations": [
-		],
-		"steps": [
-		  {
-			"id": "fffb9bd9-5e71-4b81-8846-f64455756485",
-			"validations": [
-			]
-		  }
-		]
-	  },
-	  {
-		"id": "a2085915-f276-4d08-a87d-956e19055444",
-		"description": "Ring the bells of hell",
-		"coordinates": null,
-		"required": true,
-		"section": "Day 1",
-		"progressMode": {
-		  "type": "single"
-		},
-		"requirements": [
-		  {
-			"type": "completedPrevious"
-		  }
-		],
-			  "previousTask": {
-		  "id": "7bd3d240-13fa-4559-b4fe-f870a9afd5d6"},
-		"validations": [
-		],
-		"steps": [
-		  {
-			"id": "f8266b5d-8729-41c9-8755-f647624269fd",
-			"validations": [
-			]
-		  }
-		]
-	  },
-	  {
-		"id": "168debbc-d113-4dfd-817b-00afaf2f28ff",
-		"description": "Find 10 crystals",
-		"coordinates": null,
-		"required": true,
-		"section": "Day 1",
-		"progressMode": {
-		  "type": "count",
-		  "direction": "up",
-		  "repetitions": 10,
-		  "unit": "gems"
-		},
-		"requirements": [
-		  {
-			"type": "completedPrevious"
-		  }
-		],
-		  "previousTask": {
-		  "id": "bf851b43-f174-4b31-af73-b7b098c00263"},
-		"validations": [
-		],
-		"steps": [
-		  {
-			"id": "033bfa00-fb32-4d76-8774-9436ec3f208c",
-			"validations": [
-			]
-		  }
-		]
-	  },
-	  {
-		"id": "20623a96-281a-4ac0-8aea-c5536d20b036",
-		"description": "Bring the gems back to the chaman",
-		"coordinates": null,
-		"required": true,
-		"section": "Day 1",
-		"progressMode": {
-		  "type": "single"
-		},
-		"requirements": [
-		  {
-			"type": "completedPrevious"
-		  }
-		],
-		  "previousTask": {
-		  "id": "168debbc-d113-4dfd-817b-00afaf2f28ff"},
-		"validations": [
-		],
-		"steps": [
-		  {
-			"id": "b95c73b4-c442-4803-a523-3e31ed0fbe09",
-			"validations": [
-			]
-		  }
-		]
-	  },
-	  {
-		"id": "b3f05f45-5344-4616-909e-afacbec74910",
-		"description": "Enter temple",
-		"coordinates": null,
-		"required": true,
-		"section": "Day 1",
-		"progressMode": {
-		  "type": "single"
-		},
-		"requirements": [
-		  {
-			"type": "completedPrevious"
-		  }
-		],
-		  "previousTask": {
-		  "id": "20623a96-281a-4ac0-8aea-c5536d20b036"},
-		"validations": [
-		],
-		"steps": [
-		  {
-			"id": "297bd242-6132-412a-bd12-4492af6d622a",
-			"validations": [
-			]
-		  }
-		]
-	  },
-	  {
-		"id": "03ae327d-da04-4bb5-8302-d922500447a4",
-		"description": "Return to the old lady",
-		"coordinates": null,
-		"required": true,
-		"section": "Day 1",
-		"progressMode": {
-		  "type": "single"
-		},
-		  "previousTask": {
-		  "id": "b3f05f45-5344-4616-909e-afacbec74910"},
-		"requirements": [
-		  {
-			"type": "completedPrevious"
-		  }
-		],
-		"validations": [
-		],
-		"steps": [
-		  {
-			"id": "8ce76c40-14c7-4250-bd89-827fbe265c8c",
-			"validations": [
-			]
-		  }
-		]
-	  }
-	]
-  }
+    "id": "4e72efcb-4f92-4eed-ad6b-ec683d42bd76",
+    "name": "Portal puzzle reloaded",
+    "description": "A super tough puzzle thing",
+    "thumbnailEntry": "https://github.com/decentraland-scenes/Block-dog/blob/master/screenshot/screenshot.png?raw=true",
+    "thumbnailBanner": "https://github.com/decentraland-scenes/Block-dog/blob/master/screenshot/screenshot.png?raw=true",
+    "requirements": [],
+    "active": true,
+    "visibility": "visible",
+    "deletedAt": null,
+    "tasks": [
+        {
+            "id": "1ebb22a0-186f-4215-b39e-64fb31936dd7",
+            "description": "Pick up gun",
+            "coordinates": "-133,-40",
+            "required": true,
+            "section": "Easy",
+            "progressMode": {
+                "type": "single"
+            },
+            "requirements": [],
+            "validations": [],
+            "deletedAt": null,
+            "previousTask": null,
+            "rewards": [],
+            "steps": []
+        },
+        {
+            "id": "ce7424a5-e893-4a5d-b059-24506d6e4cf6",
+            "description": "Create a wormhole",
+            "coordinates": "-133,-40",
+            "required": true,
+            "section": "Hard... ish",
+            "progressMode": {
+                "type": "step-based",
+                "unit": "portals"
+            },
+            "requirements": [
+                {
+                    "type": "completedPrevious"
+                }
+            ],
+            "validations": [],
+            "deletedAt": null,
+            "previousTask": {
+                "id": "1ebb22a0-186f-4215-b39e-64fb31936dd7",
+                "description": "Pick up gun",
+                "coordinates": "-133,-40",
+                "required": true,
+                "section": "Easy",
+                "progressMode": {
+                    "type": "single"
+                },
+                "requirements": [],
+                "validations": [],
+                "deletedAt": null
+            },
+            "rewards": [],
+            "steps": [
+                {
+                    "id": "932b3603-f1df-4183-bd19-cc59bee31adb",
+                    "validations": [],
+                    "description": null,
+                    "deletedAt": null
+                },
+                {
+                    "id": "ff41c163-4097-4b3f-8733-2aa24ffa3b1e",
+                    "validations": [],
+                    "description": null,
+                    "deletedAt": null
+                }
+            ]
+        },
+        {
+            "id": "19866889-b356-47d5-a555-c4dfda300708",
+            "description": "Get Key High Up",
+            "coordinates": "-133,-40",
+            "required": true,
+            "section": "Hard... ish",
+            "progressMode": {
+                "type": "single"
+            },
+            "requirements": [
+                {
+                    "type": "completedPrevious"
+                }
+            ],
+            "validations": [],
+            "deletedAt": null,
+            "previousTask": {
+                "id": "ce7424a5-e893-4a5d-b059-24506d6e4cf6",
+                "description": "Create a wormhole",
+                "coordinates": "-133,-40",
+                "required": true,
+                "section": "Hard... ish",
+                "progressMode": {
+                    "type": "step-based",
+                    "unit": "portals"
+                },
+                "requirements": [
+                    {
+                        "type": "completedPrevious"
+                    }
+                ],
+                "validations": [],
+                "deletedAt": null
+            },
+            "rewards": [],
+            "steps": []
+        },
+        {
+            "id": "af02dd74-07fe-4db9-8f8f-ee1e3dac6313",
+            "description": "Get key on ground",
+            "coordinates": "-133,-40",
+            "required": true,
+            "section": "Easy",
+            "progressMode": {
+                "type": "single"
+            },
+            "requirements": [],
+            "validations": [],
+            "deletedAt": null,
+            "previousTask": null,
+            "rewards": [],
+            "steps": []
+        }
+    ],
+    "rewards": [
+        {
+            "id": "1addb24b-64ab-4632-bab1-b91905baab53",
+            "type": "poap",
+            "name": "mypoap",
+            "metadata": {},
+            "deletedAt": null,
+            "imageUrl": "https://storage.googleapis.com/poapmedia/decentraland-1st-anniversary-party-2021-logo-1613742619448.png",
+            "flow": {
+                "id": "12768e40-d541-4cfe-9b97-c12916d522e6",
+                "type": "poap",
+                "serverBaseUrl": null,
+                "deletedAt": null,
+                "campaingKey": null,
+                "event": "wtfrnfts1"
+            }
+        }
+    ],
+    "creator": null
+}

@@ -1,172 +1,49 @@
 # portal-quest
- A simpe example scene that uses quests
- 
- This quest includes some single tasks, a step based task, and stores arbritrary state that gives the game continuity if you come back. It also gives away a POAP reward when the quest is finished.
- 
- 
- 
- Quest structure:
- 
- ´´´
- {
- id: "4e72efcb-4f92-4eed-ad6b-ec683d42bd76",
- name: "Portal puzzle reloaded",
- description: "A super tough puzzle thing",
- thumbnailEntry: "https://github.com/decentraland-scenes/Block-dog/blob/master/screenshot/screenshot.png?raw=true",
- thumbnailBanner: "https://github.com/decentraland-scenes/Block-dog/blob/master/screenshot/screenshot.png?raw=true",
- requirements: [ ],
- active: true,
- visibility: "visible",
- deletedAt: null,
- tasks: 
-  [
-   {
-    id: "1ebb22a0-186f-4215-b39e-64fb31936dd7",
-    description: "Pick up gun",
-    coordinates: "-133,-40",
-    required: true,
-    section: "Easy",
-    progressMode: 
-     {
-      type: "single"
-     },
-    requirements: [ ],
-    validations: [ ],
-    deletedAt: null,
-    previousTask: null,
-    rewards: [ ],
-    steps: [ ],
-   },
-   {
-    id: "ce7424a5-e893-4a5d-b059-24506d6e4cf6",
-    description: "Create a wormhole",
-    coordinates: "-133,-40",
-    required: true,
-    section: "Hard... ish",
-    progressMode: 
-     {
-      type: "step-based",
-      unit: "portals",
-     },
-    requirements: 
-     [
-      {
-       type: "completedPrevious"
-      }
-     ],
-    validations: [ ],
-    deletedAt: null,
-    previousTask: 
-     {
-      id: "1ebb22a0-186f-4215-b39e-64fb31936dd7",
-      description: "Pick up gun",
-      coordinates: "-133,-40",
-      required: true,
-      section: "Easy",
-      progressMode: 
-       {
-        type: "single"
-       },
-      requirements: [ ],
-      validations: [ ],
-      deletedAt: null,
-     },
-    rewards: [ ],
-    steps: 
-     [
-      {
-       id: "ff41c163-4097-4b3f-8733-2aa24ffa3b1e",
-       validations: [ ],
-       description: null,
-       deletedAt: null,
-      },
-      {
-       id: "932b3603-f1df-4183-bd19-cc59bee31adb",
-       validations: [ ],
-       description: null,
-       deletedAt: null,
-      },
-     ],
-   },
-   {
-    id: "19866889-b356-47d5-a555-c4dfda300708",
-    description: "Get Key High Up",
-    coordinates: "-133,-40",
-    required: true,
-    section: "Hard... ish",
-    progressMode: 
-     {
-      type: "single"
-     },
-    requirements: 
-     [
-      {
-       type: "completedPrevious"
-      }
-     ],
-    validations: [ ],
-    deletedAt: null,
-    previousTask: 
-     {
-      id: "ce7424a5-e893-4a5d-b059-24506d6e4cf6",
-      description: "Create a wormhole",
-      coordinates: "-133,-40",
-      required: true,
-      section: "Hard... ish",
-      progressMode: 
-       {
-        type: "step-based",
-        unit: "portals",
-       },
-      requirements: 
-       [
-        {
-         type: "completedPrevious"
-        }
-       ],
-      validations: [ ],
-      deletedAt: null,
-     },
-     rewards: [ ],
-     steps: [ ],
-    },
-   {
-    id: "af02dd74-07fe-4db9-8f8f-ee1e3dac6313",
-    description: "Get key on ground",
-    coordinates: "-133,-40",
-    required: true,
-    section: "Easy",
-    progressMode: 
-     {
-      type: "single"
-     },
-    requirements: [ ],
-    validations: [ ],
-    deletedAt: null,
-    previousTask: null,
-    rewards: [ ],
-    steps: [ ],
-    },
-   ],
-   rewards: 
-    [
-     {
-     id: "1addb24b-64ab-4632-bab1-b91905baab53",
-     type: "poap",
-     name: "mypoap",
-     metadata: { },
-     deletedAt: null,
-     imageUrl: "https://storage.googleapis.com/poapmedia/decentraland-1st-anniversary-party-2021-logo-1613742619448.png",
-     flow: 
-      {
-       id: "12768e40-d541-4cfe-9b97-c12916d522e6",
-       type: "poap",
-       serverBaseUrl: null,
-       deletedAt: null,
-       campaingKey: null,
-       event: "wtfrnfts1",
-      },
-     }
-   ],
-},
-´´´
+
+A simpe example scene that uses quests
+
+This quest includes some single tasks, a step based task, and stores arbritrary state that gives the game continuity if you come back. It also gives away a POAP reward when the quest is finished.
+
+Check the file `quest-example.json` to see what was uploaded to the quests server to match this scene.
+
+> Note: This quest includes a reward, the reward must be first created in the server with a separate request, and then linked to the quest by id.
+
+## Quest library
+
+### Install
+
+To install the library in a Decentraland scene, run:
+`npm i dcl-ecs-quests -B`
+
+Then open your scene’s tsconfig.json file, and add the following to the paths object:
+
+```json
+  "dcl-quests-client/quests-client-amd": [
+        "./node_modules/dcl-quests-client/quests-client-amd"
+      ],
+```
+
+Finally, run dcl start or dcl build on your project for all the internal files of the library to get properly built.
+
+Then on your scene’s Typescript files import the library by writing the following:
+
+```ts
+import { RemoteQuestTracker } from 'dcl-ecs-quests'
+import { ProgressStatus } from 'dcl-quests-client/quests-client-amd'
+```
+
+### Initiate a quest tracker
+
+All interactions with the quest server and the quest UI are handled by a quest tracker object.
+
+To initiate a quest tracker, create a new RemoteQuestTracker object, passing at least a quest ID, referencing a quest that’s already created in the quests server.
+
+```ts
+async function handleQuests() {
+  let client = await new RemoteQuestTracker(
+    '4e72efcb-4f92-4eed-ad6b-ec683d42bd76'
+  )
+}
+```
+
+> Note: Since the constructor of RemoteQuestTracker is asynchronous, you should run it inside an async function or an async block. All examples from now on will be assumed to run asynchronously.
