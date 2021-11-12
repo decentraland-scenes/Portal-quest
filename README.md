@@ -2,6 +2,8 @@
 
 A simpe example scene that uses quests
 
+> IMPORTANT: To run this example with `dcl start`, make sure you manually add this to the preview URL `&QUESTS_SERVER_URL=https://quests-api.decentraland.io`
+
 This quest includes some single tasks, a step based task, and stores arbritrary state that gives the game continuity if you come back. It also gives away a POAP reward when the quest is finished.
 
 Check the file `quest-example.json` to see what was uploaded to the quests server to match this scene.
