@@ -101,7 +101,7 @@ const input = Input.instance
 let activePortal = PortalColor.Blue
 
 input.subscribe('BUTTON_DOWN', ActionButton.POINTER, true, async (event) => {
-  if (gun.hasGun) {
+  if (gun && gun.hasGun) {
     //if (event.hit.meshName.match('lightWall_collider')) {
     // Only allow portals to appear on light walls
     if (event.hit.entityId != '' && event.hit.length < 30) {
